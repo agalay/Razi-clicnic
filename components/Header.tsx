@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { Container, Navbar, Row, Nav } from 'react-bootstrap'
-import styles from '../styles/Header.module.scss'
+import { Col, Container, Navbar, Row, Nav } from 'react-bootstrap'
 
 const menuItems = [
 	{ title: 'Главная', href: '/' },
@@ -13,31 +12,28 @@ const menuItems = [
 
 export default function Header() {
 	return (
-		<header className={styles.header}>
-			<Container fluid>
-				<Row>
-					<div className="header-area">
-						<div className="logo-area">
-							<Link href='/'>Razi Clinic</Link>
-						</div>
-					</div>
-					<Navbar expand={'lg'}>
-						<Container>
-							<Navbar.Collapse>
-								<Nav>
-									{menuItems.map(({ title, href }) => (
-										<Link
-											className='nav-link'
-											href={href}
-											key={href}
-										>
-											{title}
-										</Link>
-									))}
-								</Nav>
-							</Navbar.Collapse>
-						</Container>
-					</Navbar>
+		<header className='py-5'>
+			<Container>
+				<Row className='align-items-center'>
+					<Col md={2}>
+						<Link href='/'>Razi Clinic</Link>
+					</Col>
+					<Col md={8}>
+						<Navbar expand={'lg'}>
+							<Container>
+								<Navbar.Collapse className='justify-content-center'>
+									<Nav>
+										{menuItems.map(({ title, href }) => (
+											<li className='nav-item'>
+												<Link className='nav-link' href={href}>{title}</Link>
+											</li>
+										))}
+									</Nav>
+								</Navbar.Collapse>
+							</Container>
+						</Navbar>
+					</Col>
+					<Col md={2}></Col>
 				</Row>
 			</Container>
 		</header>
