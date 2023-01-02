@@ -1,7 +1,10 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
+import classes from '../styles/Home.module.scss'
+import {Button, Col, Container, Row} from "react-bootstrap";
+
 import MainLayout from '../layouts/MainLayout'
+import MainSlider from "../components/MainSlider";
+import React from "react";
 
 export default function Home() {
   return (
@@ -13,7 +16,54 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainLayout>
-        <h1 className='display-1'>Salam</h1>
+        <section>
+            <Container>
+                <MainSlider />
+            </Container>
+        </section>
+        <section className={`py-5 text-bg-gray ${classes.service}`}>
+            <Container>
+                <Row>
+                    <Col md={4}>
+                        <h3 className="mb-4">
+                            Why Patients Choose Our Hospital ?
+                        </h3>
+                        <p className="mb-4">
+                            Dr Linda Freemanis one of the best in, In the world, In the Galaxy. There are many variations of passages of Lorem available, but the have suffered alteration in some form, by injected humour.
+                        </p>
+                        <Button variant={"primary"}>learn more</Button>
+                    </Col>
+                    <Col md={{ span: 7, offset: 1 }}>
+                        <Row>
+                            <Col md={6}>
+                                <div className={classes.serviceItem}>
+                                    <img src="https://i.picsum.photos/id/901/63/63.jpg?hmac=2jx9IjuMelKLXE00s1vR5XkY3nPqpWdgpizjzkyGlLA" />
+                                    <h6>dental</h6>
+                                    <p>Lorem ipsum dolor sit  amet, ad vix fuisset adicit lobortis </p>
+                                </div>
+                                <div className={classes.serviceItem}>
+                                    <img src="https://i.picsum.photos/id/809/63/63.jpg?hmac=PdNbiAHAICj7wd6qkwzamQOacNE9voJTOYUmdWOmrbo" />
+                                    <h6>cardiovascular</h6>
+                                    <p>Lorem ipsum dolor sit  amet, ad vix fuisset adicit lobortis </p>
+                                </div>
+                            </Col>
+                            <Col md={6}>
+                                <div className={classes.serviceItem}>
+                                    <img src="https://i.picsum.photos/id/901/63/63.jpg?hmac=2jx9IjuMelKLXE00s1vR5XkY3nPqpWdgpizjzkyGlLA" />
+                                    <h6>dental</h6>
+                                    <p>Lorem ipsum dolor sit  amet, ad vix fuisset adicit lobortis </p>
+                                </div>
+                                <div className={classes.serviceItem}>
+                                    <img src="https://i.picsum.photos/id/809/63/63.jpg?hmac=PdNbiAHAICj7wd6qkwzamQOacNE9voJTOYUmdWOmrbo" />
+                                    <h6>cardiovascular</h6>
+                                    <p>Lorem ipsum dolor sit  amet, ad vix fuisset adicit lobortis </p>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Col>
+                </Row>
+            </Container>
+        </section>
       </MainLayout>
     </>
   )
