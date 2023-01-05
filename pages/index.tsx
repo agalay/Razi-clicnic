@@ -1,5 +1,5 @@
 import React from "react";
-import {Container, Button, Typography} from '@mui/material';
+import {Container, Button, Typography, Box} from '@mui/material';
 import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
 
 import MainLayout from '../layouts/MainLayout'
@@ -35,12 +35,12 @@ export default function Home() {
   return (
     <>
       <MainLayout>
-        <section>
+        <Box>
             <Container>
                 <MainSlider />
             </Container>
-        </section>
-        <section className={`py-5 text-bg-gray ${styles.service}`}>
+        </Box>
+        <Box sx={{ py: 5 }} className={styles.service}>
             <Container>
                 <Grid2 container spacing={3} alignItems={"center"}>
                     <Grid2 md={4}>
@@ -55,29 +55,29 @@ export default function Home() {
                     <Grid2 md={7} mdOffset={1}>
                         <Grid2 container>
                             <Grid2 md={6}>
-                                <div className="d-flex flex-column align-items-end pe-3">
+                                <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'end', pr: 3}}>
                                     {serviceItems.filter((_, i) => i < 2).map(item => (
                                         <ServiceItem key={item.title} {...item} />
                                     ))}
-                                </div>
+                                </Box>
                             </Grid2>
                             <Grid2 md={6}>
-                                <div className="pt-5 mt-3">
+                                <Box sx={{ pt: 5, mt: 3}}>
                                     {serviceItems.filter((_, i) => i >= 2).map(item => (
                                         <ServiceItem key={item.title} {...item} />
                                     ))}
-                                </div>
+                                </Box>
                             </Grid2>
                         </Grid2>
                     </Grid2>
                 </Grid2>
             </Container>
-        </section>
-        <section>
+        </Box>
+        <Box>
             <Container>
 
             </Container>
-        </section>
+        </Box>
       </MainLayout>
     </>
   )

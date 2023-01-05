@@ -4,16 +4,19 @@ export const theme = createTheme({
     typography: {
         // In Chinese and Japanese the characters are usually larger,
         // so a smaller fontsize may be appropriate.
-        fontFamily: 'var(--heading-font)',
+        fontFamily: 'var(--main-font)',
+        fontSize: 16,
         h1: {
             fontWeight: 600,
             fontSize: 46,
-            color: 'var(--heading-color)'
+            color: 'var(--heading-color)',
+            fontFamily: 'var(--heading-font)',
         },
         h3: {
             fontWeight: 600,
             fontSize: 30,
-            color: 'var(--heading-color)'
+            color: 'var(--heading-color)',
+            fontFamily: 'var(--heading-font)',
         },
     },
     palette: {

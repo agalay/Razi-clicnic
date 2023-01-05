@@ -8,9 +8,12 @@ import {Menu, Search} from '@mui/icons-material';
 
 import styles from './Header.module.scss';
 
+type TNavItem = {
+	title: string,
+	href: string
+}
 
-
-const menuItems = [
+const navItems: TNavItem[] = [
 	{ title: 'Главная', href: '/' },
 	{ title: 'О нас', href: '/about' },
 	{ title: 'Услуги', href: '/services' },
@@ -25,7 +28,7 @@ export const Header: React.FC = () => {
 	const [openMenu, setOpenMenu] = React.useState(false)
 
 	return (
-		<header className='py-5 position-relative'>
+		<Box sx={{ py: 5, position: 'relative'}}>
 			<div className={styles.headerBG} />
 			<Container>
 				<Grid2 container alignItems="center" spacing={3}>
@@ -34,7 +37,7 @@ export const Header: React.FC = () => {
 					</Grid2>
 					<Grid2 md={7}>
 						<Box sx={{ display: 'flex', justifyContent: 'center', position: 'relative', gap: 4 }}>
-							{menuItems.map(({ title, href }) => (
+							{navItems.map(({ title, href }) => (
 								<Link
 									key={href}
 									className={`${styles.navLink} ${pathname === href ? styles.navActive : ''}`}
@@ -63,6 +66,6 @@ export const Header: React.FC = () => {
 					</Grid2>
 				</Grid2>
 			</Container>
-		</header>
+		</Box>
 	)
 }

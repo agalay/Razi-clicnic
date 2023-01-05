@@ -1,14 +1,4 @@
-/* === Import Bootstrap functions === */
-@import "~bootstrap/scss/functions";
-/* === Customization bootstrap variables === */
 @import 'variables';
-
-@import "~bootstrap/scss/bootstrap";
-
-:root {
-  --heading-color: #003367;
-  --heading-font: 'Raleway', sans-serif;
-}
 
 * {
   box-sizing: border-box;

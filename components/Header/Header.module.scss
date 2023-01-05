@@ -15,7 +15,7 @@
         content: "";
         clear: both;
         display: block;
-        background: var(--bs-primary);
+        background: var(--primary-color);
         height: 2px;
         width: 0;
         margin-bottom: 10px;
@@ -23,7 +23,7 @@
     }
 
     &:hover {
-        color: var(--bs-primary);
+        color: var(--primary-color);
     }
 
     &:hover:after {
@@ -32,7 +32,7 @@
 }
 
 .navActive {
-    color: var(--bs-primary);
+    color: var(--primary-color);
     &::after {
         width: 15px;
     }

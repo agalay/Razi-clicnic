@@ -1,6 +1,7 @@
-$font-family-base: 'Montserrat', sans-serif;
-$body-color: #111;
-
-$primary: rgba(255, 134, 134, 0.9);
-$secondary: #585858;
-
+:root {
+  --primary-color: rgba(255, 134, 134, 0.9);
+  --secondary-color: #585858;
+  --heading-color: #003367;
+  --main-font: 'Montserrat', sans-serif;
+  --heading-font: 'Raleway', sans-serif;
+}

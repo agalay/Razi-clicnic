@@ -1,12 +1,18 @@
 import React from 'react';
-import { Carousel } from "react-bootstrap";
+import Carousel from 'react-material-ui-carousel'
 
 import classes from '../styles/MainSlider.module.scss'
-import {Typography, Button} from "@mui/material";
+import {Typography, Button, Box} from "@mui/material";
 import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
 
+type TSlide = {
+    image: string
+    title: string
+    text: string
+    link: string
+}
 
-const slides = [
+const slides: TSlide[] = [
     {
         image: 'https://i.picsum.photos/id/679/900/900.jpg?hmac=djA16Fqy3klscx2S9SF3OjgTL5j4XpK4Dw3Nf143T8k',
         title: 'Uncompromising excellence. Commitment to care.',
@@ -31,7 +37,7 @@ export default function MainSlider() {
     return (
         <Carousel indicators={false}>
             {slides.map(slide => (
-                <Carousel.Item key={slide.title}>
+                <Box key={slide.title}>
                     <Grid2 container alignItems="center" spacing={3}>
                         <Grid2 md={4}>
                             <Typography variant="h1">{slide.title}</Typography>
@@ -45,7 +51,7 @@ export default function MainSlider() {
                             />
                         </Grid2>
                     </Grid2>
-                </Carousel.Item>
+                </Box>
             ))}
         </Carousel>
     );
