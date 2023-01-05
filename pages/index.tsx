@@ -11,22 +11,22 @@ import {NextPage} from "next";
 
 const serviceItems: IServiceItem[] = [
     {
-        image: 'https://i.picsum.photos/id/809/63/63.jpg?hmac=PdNbiAHAICj7wd6qkwzamQOacNE9voJTOYUmdWOmrbo',
+        image: '/page-main/icon-02.png',
         title: 'dental  ',
         text: 'Lorem ipsum dolor sit  amet, ad vix fuisset adicit lobortis',
     },
     {
-        image: 'https://i.picsum.photos/id/809/63/63.jpg?hmac=PdNbiAHAICj7wd6qkwzamQOacNE9voJTOYUmdWOmrbo',
+        image: '/page-main/icon-01.png',
         title: 'cardiovascular',
         text: 'Lorem ipsum dolor sit  amet, ad vix fuisset adicit lobortis',
     },
     {
-        image: 'https://i.picsum.photos/id/809/63/63.jpg?hmac=PdNbiAHAICj7wd6qkwzamQOacNE9voJTOYUmdWOmrbo',
+        image: '/page-main/icon-03.png',
         title: 'neurology',
         text: 'Lorem ipsum dolor sit  amet, ad vix fuisset adicit lobortis',
     },
     {
-        image: 'https://i.picsum.photos/id/809/63/63.jpg?hmac=PdNbiAHAICj7wd6qkwzamQOacNE9voJTOYUmdWOmrbo',
+        image: '/page-main/icon-04.png',
         title: 'ophtalmologue',
         text: 'Lorem ipsum dolor sit  amet, ad vix fuisset adicit lobortis',
     },
