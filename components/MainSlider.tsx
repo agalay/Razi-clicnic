@@ -1,7 +1,9 @@
 import React from 'react';
-import {Button, Carousel, Col, Row} from "react-bootstrap";
+import { Carousel } from "react-bootstrap";
 
 import classes from '../styles/MainSlider.module.scss'
+import {Typography, Button} from "@mui/material";
+import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
 
 
 const slides = [
@@ -30,19 +32,19 @@ export default function MainSlider() {
         <Carousel indicators={false}>
             {slides.map(slide => (
                 <Carousel.Item key={slide.title}>
-                    <Row className="align-items-center">
-                        <Col md={4}>
-                            <h1 className="mb-4">{slide.title}</h1>
-                            <p className="mb-4">{slide.text}</p>
-                            <Button variant={"primary"} href={slide.link}>Make Appointment</Button>
-                        </Col>
-                        <Col md={8}>
+                    <Grid2 container alignItems="center" spacing={3}>
+                        <Grid2 md={4}>
+                            <Typography variant="h1">{slide.title}</Typography>
+                            <Typography sx={{my: 3}}>{slide.text}</Typography>
+                            <Button variant="contained" href={slide.link}>Make Appointment</Button>
+                        </Grid2>
+                        <Grid2 md={8}>
                             <figure
                                 className={classes.sliderImage}
                                 style={{backgroundImage: `url(${slide.image})`}}
                             />
-                        </Col>
-                    </Row>
+                        </Grid2>
+                    </Grid2>
                 </Carousel.Item>
             ))}
         </Carousel>
