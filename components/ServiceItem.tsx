@@ -7,7 +7,7 @@ export interface IServiceItem {
     text: string,
 }
 
-export default function ServiceItem(props: IServiceItem) {
+export const ServiceItem: React.FC<IServiceItem> = (props) => {
     const { image, title, text} = props
     return (
         <div className={styles.serviceItem}>

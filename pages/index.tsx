@@ -3,10 +3,11 @@ import {Container, Button, Typography, Box} from '@mui/material';
 import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
 
 import MainLayout from '../layouts/MainLayout'
-import MainSlider from "../components/MainSlider"
-import ServiceItem, {IServiceItem} from "../components/ServiceItem"
+import { MainSlider } from "../components/MainSlider"
+import { ServiceItem, IServiceItem } from "../components/ServiceItem"
 
 import styles from '../styles/Home.module.scss'
+import {NextPage} from "next";
 
 const serviceItems: IServiceItem[] = [
     {
@@ -31,15 +32,13 @@ const serviceItems: IServiceItem[] = [
     },
 ]
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <>
       <MainLayout>
-        <Box>
-            <Container>
-                <MainSlider />
-            </Container>
-        </Box>
+        <Container>
+            <MainSlider />
+        </Container>
         <Box sx={{ py: 5 }} className={styles.service}>
             <Container>
                 <Grid2 container spacing={3} alignItems={"center"}>
@@ -82,3 +81,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Home;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from 'react-material-ui-carousel'
 
-import classes from '../styles/MainSlider.module.scss'
+import styles from './MainSlider.module.scss'
 import {Typography, Button, Box} from "@mui/material";
 import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
 
@@ -33,7 +33,7 @@ const slides: TSlide[] = [
     }
 ]
 
-export default function MainSlider() {
+export const MainSlider: React.FC = () => {
     return (
         <Carousel indicators={false}>
             {slides.map(slide => (
@@ -46,7 +46,7 @@ export default function MainSlider() {
                         </Grid2>
                         <Grid2 md={8}>
                             <figure
-                                className={classes.sliderImage}
+                                className={styles.sliderImage}
                                 style={{backgroundImage: `url(${slide.image})`}}
                             />
                         </Grid2>

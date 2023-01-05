@@ -1,7 +1,10 @@
 import React from 'react'
+import {NextPage} from "next";
 
-export default function about() {
+const About: NextPage = () => {
     return (
         <div>about</div>
     )
 }
+
+export default About;
