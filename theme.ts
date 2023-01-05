@@ -12,10 +12,19 @@ export const theme = createTheme({
             color: 'var(--heading-color)',
             fontFamily: 'var(--heading-font)',
         },
+        h2: {
+            fontWeight: 600,
+            fontFamily: 'var(--heading-font)',
+        },
         h3: {
             fontWeight: 600,
             fontSize: 30,
             color: 'var(--heading-color)',
+            fontFamily: 'var(--heading-font)',
+        },
+        h6: {
+            fontSize: '1rem',
+            fontWeight: 600,
             fontFamily: 'var(--heading-font)',
         },
     },

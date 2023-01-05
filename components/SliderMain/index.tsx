@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from 'react-material-ui-carousel'
 
-import styles from './MainSlider.module.scss'
+import styles from './SliderMain.module.scss'
 import {Typography, Button, Box} from "@mui/material";
 import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
 
@@ -33,7 +33,7 @@ const slides: TSlide[] = [
     }
 ]
 
-export const MainSlider: React.FC = () => {
+export const SliderMain: React.FC = () => {
     return (
         <Carousel indicators={false}>
             {slides.map(slide => (
