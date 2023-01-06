@@ -41,9 +41,10 @@ export const theme = createTheme({
             styleOverrides: {
                 // Name of the slot
                 root: {
-                    borderRadius: '6px',
+                    borderRadius: 100,
                     textTransform: 'none',
                     transition: 'none',
+                    padding: '10px 25px',
                 },
                 contained: {
                     color: '#fff',

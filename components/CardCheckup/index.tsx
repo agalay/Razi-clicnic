@@ -32,10 +32,7 @@ export const CardCheckup: React.FC<ICheckup> = (props) => {
                     width: '100%',
                     height: '100%',
                     borderRadius: 5,
-                },
-                '&:nth-child(2)': {
-                    transform: 'scaleY(1.1)'
-                },
+                }
             }}
         >
             <Box>
@@ -43,25 +40,32 @@ export const CardCheckup: React.FC<ICheckup> = (props) => {
                     variant="h6"
                     sx={{
                         textTransform: 'uppercase',
-                        letterSpacing: '2px'
+                        letterSpacing: '2px',
+                        fontFamily: 'var(--main-font)'
                     }}
                 >
                     {props.name}
                 </Typography>
-                <Box>
+                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <Typography
                         variant="h2"
                         sx={{
-                            py: 2
+                            py: 3,
+                            fontFamily: 'var(--main-font)'
                         }}
                     >
                         ${props.price}
                     </Typography>
-                    <Badge>Per Year</Badge>
-                    <List dense sx={{textAlign: 'center'}}>
+                    <List dense sx={{ mb: 3 }}>
                         {props.points.map(point => (
-                            <ListItem key={point}>
-                                <ListItemText primary={point} />
+                            <ListItem key={point} sx={{
+                                textAlign: 'center',
+                                display: 'list-item',
+                                listStyleType: 'disc',
+                                listStylePosition: 'inside',
+                                py: 0
+                            }}>
+                                <ListItemText primary={point} sx={{ display: 'inline-block'}} />
                             </ListItem>
                         ))}
                     </List>

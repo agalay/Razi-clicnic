@@ -9,6 +9,7 @@ import { ServiceItem, IServiceItem } from "../components/ServiceItem"
 import styles from '../styles/Home.module.scss'
 import {NextPage} from "next";
 import {CardCheckup, ICheckup} from "../components/CardCheckup";
+import SectionLayout from "../layouts/SectionLayout";
 
 const serviceItems: IServiceItem[] = [
     {
@@ -38,21 +39,21 @@ const checkups: ICheckup[] = [
         image: 'https://i.picsum.photos/id/158/900/900.jpg?hmac=Y_3Ec9S0exZVqUGGuRp-XSlJm4Xo9LX9FXlmMPHU7ls',
         name: 'dental',
         price: 150,
-        points: ['1 test', '2 test'],
+        points: ['1 test asdasd asd', '2 test test', '3 test', '4 test test test test'],
         link: 'adasd'
     },
     {
         image: 'https://i.picsum.photos/id/182/900/900.jpg?hmac=q0ngu4s_7P-Qu5LecKNdychs38Hp1f5Cay1wrZLzEY8',
         name: 'dental',
         price: 200,
-        points: ['1 test', '2 test'],
+        points: ['3 Departments', '15 Test', '15 Emergency', 'No Medical Assisdance'],
         link: 'adasd'
     },
     {
         image: 'https://i.picsum.photos/id/72/900/900.jpg?hmac=bhwKHEu1K27FICxIYL0Okr0hg-adXoefjl4IToY5ohA',
         name: 'dental',
         price: 300,
-        points: ['1 test', '2 test'],
+        points: ['1 test asdasd asd', '2 test test', '3 test', '4 test test test test'],
         link: 'adasd'
     },
 ]
@@ -97,19 +98,21 @@ const Home: NextPage = () => {
                 </Grid2>
             </Container>
         </Box>
-        <Box>
-            <Container>
-                <Grid2 container spacing={3} alignItems={"center"}>
-                    {checkups.map(checkup => (
-                        <Grid2 md={4} key={checkup.name}>
-                            <CardCheckup
-                                {...checkup}
-                            />
-                        </Grid2>
-                    ))}
-                </Grid2>
-            </Container>
-        </Box>
+        <SectionLayout title="Наши чекапы">
+            <Grid2 container spacing={3} alignItems={"center"}>
+                {checkups.map(checkup => (
+                    <Grid2 md={4} key={checkup.name} sx={{
+                        '&:nth-child(2)': {
+                            transform: 'scaleY(1.1)'
+                        },
+                    }}>
+                        <CardCheckup
+                            {...checkup}
+                        />
+                    </Grid2>
+                ))}
+            </Grid2>
+        </SectionLayout>
       </MainLayout>
     </>
   )
