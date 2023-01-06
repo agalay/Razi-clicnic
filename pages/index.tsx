@@ -1,35 +1,39 @@
 import React from "react";
-import {Container, Button, Typography, Box, Stack} from '@mui/material';
+import {NextPage} from "next";
+
+
+import {Container, Button, Typography, Box} from '@mui/material';
 import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
 
 import MainLayout from '../layouts/MainLayout'
-import { SliderMain } from "../components/SliderMain"
+import SectionLayout from "../layouts/SectionLayout";
+
+import { CarouselMain } from "../components/Carousels/Main";
+import { CarouselDoctors } from "../components/Carousels/Doctors";
 import { ServiceItem, IServiceItem } from "../components/ServiceItem"
+import { Checkup, ICheckup } from "../components/Cards/Checkup";
 
 import styles from '../styles/Home.module.scss'
-import {NextPage} from "next";
-import {CardCheckup, ICheckup} from "../components/CardCheckup";
-import SectionLayout from "../layouts/SectionLayout";
 
 const serviceItems: IServiceItem[] = [
     {
         image: '/page-main/icon-02.png',
-        title: 'dental  ',
+        title: 'Стоматология',
         text: 'Lorem ipsum dolor sit  amet, ad vix fuisset adicit lobortis',
     },
     {
         image: '/page-main/icon-01.png',
-        title: 'cardiovascular',
+        title: 'Кардиология',
         text: 'Lorem ipsum dolor sit  amet, ad vix fuisset adicit lobortis',
     },
     {
         image: '/page-main/icon-03.png',
-        title: 'neurology',
+        title: 'Неврология',
         text: 'Lorem ipsum dolor sit  amet, ad vix fuisset adicit lobortis',
     },
     {
         image: '/page-main/icon-04.png',
-        title: 'ophtalmologue',
+        title: 'Офтмальмология',
         text: 'Lorem ipsum dolor sit  amet, ad vix fuisset adicit lobortis',
     },
 ]
@@ -58,19 +62,23 @@ const checkups: ICheckup[] = [
     },
 ]
 
+
+
 const Home: NextPage = () => {
   return (
     <>
       <MainLayout>
-        <Container>
-            <SliderMain />
-        </Container>
+        <Box sx={{ pb: 5 }}>
+            <Container>
+                <CarouselMain />
+            </Container>
+        </Box>
         <Box sx={{ py: 5 }} className={styles.service}>
             <Container>
                 <Grid2 container spacing={3} alignItems={"center"}>
                     <Grid2 md={4}>
                         <Typography variant="h3">
-                            Why Patients Choose Our Hospital ?
+                            Почему пациенты выбирают нашу клинику?
                         </Typography>
                         <Typography sx={{my: 4}}>
                             Dr Linda Freemanis one of the best in, In the world, In the Galaxy. There are many variations of passages of Lorem available, but the have suffered alteration in some form, by injected humour.
@@ -106,13 +114,19 @@ const Home: NextPage = () => {
                             transform: 'scaleY(1.1)'
                         },
                     }}>
-                        <CardCheckup
+                        <Checkup
                             {...checkup}
                         />
                     </Grid2>
                 ))}
             </Grid2>
         </SectionLayout>
+        <SectionLayout title="Наши доктора">
+            <CarouselDoctors />
+        </SectionLayout>
+          <SectionLayout title="Записаться на прием">
+
+          </SectionLayout>
       </MainLayout>
     </>
   )

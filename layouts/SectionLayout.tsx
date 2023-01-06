@@ -10,7 +10,7 @@ const SectionLayout: React.FC<ISectionLayoutProps> = ({title, children}) => {
     return (
         <Box
             sx={{
-                py: 12
+                py: 8
             }}
         >
             <Container>

@@ -9,14 +9,14 @@ export interface ICheckup {
     link: string
 }
 
-export const CardCheckup: React.FC<ICheckup> = (props) => {
+export const Checkup: React.FC<ICheckup> = (props) => {
     return (
         <Paper
             elevation={3}
             sx={{
                 textAlign: 'center',
                 py: 10,
-                borderRadius: 5,
+                borderRadius: 'var(--border-radius)',
                 background: `url(${props.image}) no-repeat center / cover`,
                 color: '#fff',
                 position: 'relative',

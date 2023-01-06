@@ -22,6 +22,12 @@ export const theme = createTheme({
             color: 'var(--heading-color)',
             fontFamily: 'var(--heading-font)',
         },
+        h4: {
+            fontWeight: 600,
+            fontSize: 24,
+            color: 'var(--heading-color)',
+            fontFamily: 'var(--heading-font)',
+        },
         h6: {
             fontSize: '1rem',
             fontWeight: 600,
