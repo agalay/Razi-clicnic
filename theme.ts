@@ -2,8 +2,6 @@ import { createTheme } from '@mui/material/styles';
 
 export const theme = createTheme({
     typography: {
-        // In Chinese and Japanese the characters are usually larger,
-        // so a smaller fontsize may be appropriate.
         fontFamily: 'var(--main-font)',
         fontSize: 16,
         h1: {

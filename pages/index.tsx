@@ -2,7 +2,7 @@ import React from "react";
 import {NextPage} from "next";
 
 
-import {Container, Button, Typography, Box} from '@mui/material';
+import {Container, Button, Typography, Box, CardContent, Card, TextField, MenuItem} from '@mui/material';
 import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
 
 import MainLayout from '../layouts/MainLayout'
@@ -14,6 +14,7 @@ import { ServiceItem, IServiceItem } from "../components/ServiceItem"
 import { Checkup, ICheckup } from "../components/Cards/Checkup";
 
 import styles from '../styles/Home.module.scss'
+import CarouselReviews from "../components/Carousels/Reviews";
 
 const serviceItems: IServiceItem[] = [
     {
@@ -48,14 +49,14 @@ const checkups: ICheckup[] = [
     },
     {
         image: 'https://i.picsum.photos/id/182/900/900.jpg?hmac=q0ngu4s_7P-Qu5LecKNdychs38Hp1f5Cay1wrZLzEY8',
-        name: 'dental',
+        name: 'dental2',
         price: 200,
         points: ['3 Departments', '15 Test', '15 Emergency', 'No Medical Assisdance'],
         link: 'adasd'
     },
     {
         image: 'https://i.picsum.photos/id/72/900/900.jpg?hmac=bhwKHEu1K27FICxIYL0Okr0hg-adXoefjl4IToY5ohA',
-        name: 'dental',
+        name: 'dental3',
         price: 300,
         points: ['1 test asdasd asd', '2 test test', '3 test', '4 test test test test'],
         link: 'adasd'
@@ -124,9 +125,97 @@ const Home: NextPage = () => {
         <SectionLayout title="Наши доктора">
             <CarouselDoctors />
         </SectionLayout>
-          <SectionLayout title="Записаться на прием">
+        <SectionLayout title="Записаться на прием">
+        <Card sx={{ py: 10 }}>
+            <Grid2 container alignItems="center">
+                <Grid2 md={4}>
+                    <Box
+                        component="img"
+                        src="https://i.picsum.photos/id/65/900/900.jpg?hmac=DwxWjh-mhUYXFvbscXo1vsZdisO2noKPenSiYGm2zEQ"
+                        sx={{
+                            width: '100%',
+                            borderRadius: '0 var(--border-radius) var(--border-radius) 0',
+                            objectFit: 'cover'
+                        }}
+                    >
 
-          </SectionLayout>
+                    </Box>
+                </Grid2>
+                <Grid2 md={8} sx={{ px: 5 }}>
+                    <Grid2 container spacing={3}>
+                        <Grid2 md={6}>
+                            <TextField
+                              label="Имя"
+                              size="small"
+                              fullWidth
+                              sx={{ mb: 2 }}
+                            />
+                            <TextField
+                              label="Email"
+                              type="email"
+                              size="small"
+                              fullWidth
+                              sx={{ mb: 2 }}
+                            />
+                            <TextField
+                              select
+                              label="Доктор"
+                              size="small"
+                              fullWidth
+                              sx={{ mb: 2 }}
+                            >
+                                {['Гинеколог', 'Невролог', 'Педиатр'].map((option) => (
+                                  <MenuItem key={option} value={option}>
+                                      {option}
+                                  </MenuItem>
+                                ))}
+                            </TextField>
+                            <Button variant="contained">Отправить</Button>
+                        </Grid2>
+                        <Grid2 md={6}>
+                            <TextField
+                              select
+                              label="Ваш пол"
+                              size="small"
+                              fullWidth
+                              sx={{ mb: 2 }}
+                            >
+                                {['Муж.', 'Жен.'].map((option) => (
+                                  <MenuItem key={option} value={option}>
+                                      {option}
+                                  </MenuItem>
+                                ))}
+                            </TextField>
+                            <TextField
+                              type="date"
+                              size="small"
+                              fullWidth
+                              sx={{ mb: 2 }}
+                            />
+                            <TextField
+                              select
+                              label="Отделение"
+                              size="small"
+                              fullWidth
+                            >
+                                {['Гинекология', 'Терапия', 'Урология'].map((option) => (
+                                  <MenuItem key={option} value={option}>
+                                      {option}
+                                  </MenuItem>
+                                ))}
+                            </TextField>
+                        </Grid2>
+                    </Grid2>
+                </Grid2>
+            </Grid2>
+        </Card>
+      </SectionLayout>
+        <SectionLayout title="Отзывы" container={false}>
+           <CarouselReviews />
+        </SectionLayout>
+        <SectionLayout title="Наши новости" container={false}>
+            фывф
+        </SectionLayout>
       </MainLayout>
     </>
   )
