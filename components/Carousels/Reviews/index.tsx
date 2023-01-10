@@ -97,6 +97,8 @@ const CarouselReviews = () => {
 			text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores autem cum deleniti dolorem ea eos hic ipsum magnam magni minima, natus neque nostrum obcaecati optio pariatur sapiente similique ullam.\n'
 		},
 	]
+	// @ts-ignore
+	// @ts-ignore
 	return (
 		<Grid2 container spacing={3} alignItems="center">
 			<Grid2 md={5}>
@@ -131,9 +133,8 @@ const CarouselReviews = () => {
 					className={styles.reviewsSlider}
 				>
 					{reviews.map(review => (
-						<div className="imageWrap">
+						<div className="imageWrap" key={review.id}>
 							<Box
-								key={review.id}
 								src={review.image}
 								component="img"
 								sx={{

@@ -10,7 +10,7 @@ interface ISectionLayoutProps {
 const SectionLayout: React.FC<ISectionLayoutProps> = (props) => {
     const { title, children, container = true } = props
     return (
-        <Box sx={{ py: 8 }}>
+        <Box sx={{ py: 6 }}>
             <Container sx={{ mb: 10 }}>
                 <Typography
                     variant="h2"

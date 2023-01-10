@@ -7,6 +7,7 @@ import {ThemeProvider} from "@mui/material/styles";
 
 import {theme} from "../theme";
 import {Header} from "../components/Header";
+import {Footer} from "../components/Footer";
 
 import "slick-carousel/slick/slick.scss";
 import "slick-carousel/slick/slick-theme.scss";
@@ -31,6 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <CssBaseline />
           <Header />
           <Component {...pageProps} />
+          <Footer />
         </ThemeProvider>
       </>
 
