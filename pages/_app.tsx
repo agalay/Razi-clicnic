@@ -13,6 +13,8 @@ import "slick-carousel/slick/slick.scss";
 import "slick-carousel/slick/slick-theme.scss";
 import '../styles/globals.scss'
 
+import '../config/firebase';
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
       <>

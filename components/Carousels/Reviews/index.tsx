@@ -6,8 +6,8 @@ import {Box, Typography} from "@mui/material";
 import styles from './reviews.module.scss'
 
 const CarouselReviews = () => {
-	const [sliderNav, setSliderNav] = React.useState(null);
-	const [slider, setSlider] = React.useState(null);
+	const [sliderNav, setSliderNav] = React.useState<Slider|null>(null);
+	const [slider, setSlider] = React.useState<Slider|null>(null);
 
 	const settingsNav = {
 		autoplay: true,
@@ -97,8 +97,6 @@ const CarouselReviews = () => {
 			text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores autem cum deleniti dolorem ea eos hic ipsum magnam magni minima, natus neque nostrum obcaecati optio pariatur sapiente similique ullam.\n'
 		},
 	]
-	// @ts-ignore
-	// @ts-ignore
 	return (
 		<Grid2 container spacing={3} alignItems="center">
 			<Grid2 md={5}>
