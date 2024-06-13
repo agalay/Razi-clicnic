@@ -1,7 +1,7 @@
 import React from 'react';
 import Slider from "react-slick";
 
-import Doctor, {IDoctor} from "../../Cards/Doctor";
+import Doctor, { IDoctor } from "../../Cards/Doctor";
 
 export const CarouselDoctors: React.FC = () => {
     const settings = {
@@ -14,7 +14,7 @@ export const CarouselDoctors: React.FC = () => {
     const slides: IDoctor[] = [
         {
             id: 1,
-            image: 'https://i.picsum.photos/id/679/900/900.jpg?hmac=djA16Fqy3klscx2S9SF3OjgTL5j4XpK4Dw3Nf143T8k',
+            image: 'https://placehold.co/900',
             name: 'Муэз Хадиджа',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, vero? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, vero? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, vero?',
             link: 'test',
@@ -22,7 +22,7 @@ export const CarouselDoctors: React.FC = () => {
         },
         {
             id: 2,
-            image: 'https://i.picsum.photos/id/244/900/900.jpg?hmac=w8yBVcv0Y6YdCBm6fe8t21vc_7AnQx4IDszS4vs7Ft8',
+            image: 'https://placehold.co/900',
             name: 'Эбреолидзе Ираклий',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, vero?',
             position: 'Невролог',
@@ -30,7 +30,7 @@ export const CarouselDoctors: React.FC = () => {
         },
         {
             id: 3,
-            image: 'https://i.picsum.photos/id/925/900/900.jpg?hmac=ciWUHxcnQsbjkMmo2PfConEljKNJFt_0fT8SHUBA7Gc',
+            image: 'https://placehold.co/900',
             name: 'Хачукаева Заира',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, vero?',
             position: 'Кардиолог',

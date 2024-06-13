@@ -1,13 +1,13 @@
 import React from 'react';
 import Grid2 from "@mui/material/Unstable_Grid2";
 import Slider from "react-slick";
-import {Box, Typography} from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 import styles from './reviews.module.scss'
 
 const CarouselReviews = () => {
-	const [sliderNav, setSliderNav] = React.useState<Slider|null>(null);
-	const [slider, setSlider] = React.useState<Slider|null>(null);
+	const [sliderNav, setSliderNav] = React.useState<Slider | null>(null);
+	const [slider, setSlider] = React.useState<Slider | null>(null);
 
 	const settingsNav = {
 		autoplay: true,
@@ -56,42 +56,42 @@ const CarouselReviews = () => {
 	const reviews = [
 		{
 			id: 1,
-			image: 'https://i.picsum.photos/id/1060/900/900.jpg?hmac=cNcbmabqCYKZYr2gCXCsWE0vrDBVE9M48AmpTom5fW4',
+			image: 'https://placehold.co/900',
 			name: 'Зухра Сурхоева',
 			department: 'Кардиология',
 			text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores autem cum deleniti dolorem ea eos hic ipsum magnam magni minima, natus neque nostrum obcaecati optio pariatur sapiente similique ullam.\n'
 		},
 		{
 			id: 2,
-			image: 'https://i.picsum.photos/id/908/900/900.jpg?hmac=qAFo44QVaMI0_ouSCjxcqK-QUL_eqQFPtmnqp0kfhDE',
+			image: 'https://placehold.co/900',
 			name: 'Зарета Оздоева',
 			department: 'Хирургия',
 			text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores autem cum deleniti dolorem ea eos hic ipsum magnam magni minima, natus neque nostrum obcaecati optio pariatur sapiente similique ullam.\n'
 		},
 		{
 			id: 3,
-			image: 'https://i.picsum.photos/id/72/900/900.jpg?hmac=bhwKHEu1K27FICxIYL0Okr0hg-adXoefjl4IToY5ohA',
+			image: 'https://placehold.co/900',
 			name: 'Лейла Куштова',
 			department: 'Неврология',
 			text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores autem cum deleniti dolorem ea eos hic ipsum magnam magni minima, natus neque nostrum obcaecati optio pariatur sapiente similique ullam.\n'
 		},
 		{
 			id: 4,
-			image: 'https://i.picsum.photos/id/669/900/900.jpg?hmac=qmFcT-1Ja-l6ppfosT5WLL646U7IAtCijipadikwyS0',
+			image: 'https://placehold.co/900',
 			name: 'Рая Костоева',
 			department: 'Терапия',
 			text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores autem cum deleniti dolorem ea eos hic ipsum magnam magni minima, natus neque nostrum obcaecati optio pariatur sapiente similique ullam.\n'
 		},
 		{
 			id: 5,
-			image: 'https://i.picsum.photos/id/797/900/900.jpg?hmac=cRuvqI2IDg3ZXfq-IRoGBUD4qkX5kESX8IJFc24pJAY',
+			image: 'https://placehold.co/900',
 			name: 'Марет Галаева',
 			department: 'Терапия',
 			text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores autem cum deleniti dolorem ea eos hic ipsum magnam magni minima, natus neque nostrum obcaecati optio pariatur sapiente similique ullam.\n'
 		},
 		{
 			id: 6,
-			image: 'https://i.picsum.photos/id/797/900/900.jpg?hmac=cRuvqI2IDg3ZXfq-IRoGBUD4qkX5kESX8IJFc24pJAY',
+			image: 'https://placehold.co/900',
 			name: 'Алина Галаева',
 			department: 'Педиатрия',
 			text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores autem cum deleniti dolorem ea eos hic ipsum magnam magni minima, natus neque nostrum obcaecati optio pariatur sapiente similique ullam.\n'
@@ -114,7 +114,7 @@ const CarouselReviews = () => {
 							<Typography variant="h4">
 								{review.name}
 							</Typography>
-							<Typography variant="h6" sx={{ color: '#8596A7', mt: 1, mb: 4}}>
+							<Typography variant="h6" sx={{ color: '#8596A7', mt: 1, mb: 4 }}>
 								{review.department}
 							</Typography>
 							<Typography sx={{ fontSize: 14 }}>

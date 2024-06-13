@@ -33,7 +33,7 @@ export const Header: React.FC = () => {
 			<Container>
 				<Grid2 container alignItems="center" spacing={3}>
 					<Grid2 md={3}>
-						<Link href='/'>Razi Clinic</Link>
+						<Link href='/'>Здоровье плюс</Link>
 					</Grid2>
 					<Grid2 md={7}>
 						<Box sx={{ display: 'flex', justifyContent: 'center', position: 'relative', gap: 4 }}>
