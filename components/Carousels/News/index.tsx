@@ -8,6 +8,10 @@ import styles from './news.module.scss'
 const CarouselNews = () => {
 	const [slider, setSlider] = React.useState<Slider|null>(null);
 
+	// React.useEffect(() => {
+	// 	fetch('https://api.telegram.org/bot7439302368:AAEy0XmJAMyDqtsKEZZxHuMISB7DJkiyQAQ/getUpdates')
+	// },[])
+
 	const settings = {
 		dots: false,
 		infinite: true,

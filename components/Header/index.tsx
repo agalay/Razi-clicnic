@@ -18,7 +18,7 @@ const navItems: TNavItem[] = [
 	{ title: 'О нас', href: '/about' },
 	{ title: 'Услуги', href: '/services' },
 	{ title: 'Врачи', href: '/doctors' },
-	{ title: 'Контакты', href: '/contact' },
+	{ title: 'Контакты', href: '/contacts' },
 ]
 
 export const Header: React.FC = () => {
@@ -26,10 +26,10 @@ export const Header: React.FC = () => {
 
 	const [openSearch, setOpenSearch] = React.useState(false)
 	const [openMenu, setOpenMenu] = React.useState(false)
-
+	console.log(pathname)
 	return (
 		<Box sx={{ py: 5, position: 'relative'}}>
-			<div className={styles.headerBG} />
+			{pathname === '/' && <div className={styles.headerBG}/>}
 			<Container>
 				<Grid2 container alignItems="center" spacing={3}>
 					<Grid2 md={3}>

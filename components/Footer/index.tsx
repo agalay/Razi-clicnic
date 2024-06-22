@@ -43,11 +43,7 @@ const [patients, support] = [
 export const Footer:React.FC = (props) => {
 	return (
 		<footer>
-			<iframe
-				src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11625.100768565688!2d44.8098561!3d43.245654!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb3f5e856b63c4858!2z0JfQtNC-0YDQvtCy0YzQtSDQv9C70Y7RgQ!5e0!3m2!1sru!2sru!4v1673267497613!5m2!1sru!2sru"
-				width="100%" height="450" style={{ border: 0 }} allowFullScreen loading="lazy"
-				referrerPolicy="no-referrer-when-downgrade"
-			/>
+
 
 			<Box sx={{
 				background: '#F7F9FA',
@@ -61,7 +57,7 @@ export const Footer:React.FC = (props) => {
 						<Grid2 container spacing={3}>
 							<Grid2 md={4}>
 								<Box>
-									<Link href='/'>Razi Clinic</Link>
+									<Link href='/'>Здоровье+</Link>
 								</Box>
 								<Box>
 									<List>
