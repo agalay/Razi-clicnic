@@ -103,7 +103,7 @@ const CarouselNews = () => {
 										}}
 									>
 										<Typography>
-											{new Date(item.createdAt).toLocaleDateString()}
+											{/*{new Date().toLocaleDateString()}*/}
 										</Typography>
 										<Typography variant="h6" sx={{ mb: 1}}>
 											{item.title}

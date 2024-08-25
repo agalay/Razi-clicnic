@@ -34,25 +34,47 @@ export const theme = createTheme({
     },
     palette: {
         primary: {
-            main: 'rgba(255, 134, 134, 0.9)',
+            main: 'rgba(33, 205, 170, 1)',
         },
         secondary: {
             main: '#585858',
-        }
+        },
     },
     components: {
+        MuiOutlinedInput: {
+            styleOverrides: {
+                notchedOutline: {
+                    border: 'none',
+                },
+            },
+        },
+        MuiTextField: {
+            styleOverrides: {
+                root: {
+                    borderRadius: 25,
+                    border: 'none',
+                    background: 'rgba(var(--input-bg), .15)',
+                },
+            },
+        },
         MuiButton: {
             styleOverrides: {
                 // Name of the slot
+
                 root: {
                     borderRadius: 100,
                     textTransform: 'none',
                     transition: 'none',
                     padding: '10px 25px',
                 },
+
                 contained: {
                     color: '#fff',
-                    boxShadow: '0 6px 20px -8px rgb(255 134 134 / 90%)',
+                    boxShadow: '0 6px 20px -8px var(--primary-color)',
+
+                },
+                containedSizeLarge: {
+                    height: '60px'
                 }
             },
         },

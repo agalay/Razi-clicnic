@@ -1,5 +1,5 @@
 import React from 'react'
-import {Box, Container, Typography} from "@mui/material";
+import {Box, Breadcrumbs, Container, Typography, Link} from "@mui/material";
 
 export default function PageLayout({ title, children }: {
     children: React.ReactNode;
@@ -14,9 +14,16 @@ export default function PageLayout({ title, children }: {
                 <Container>
                     <Typography
                         variant="h1"
+                        sx={{ marginBottom: '15px' }}
                     >
                         {title}
                     </Typography>
+                    <Breadcrumbs aria-label="breadcrumb" sx={{ fontSize: '14px' }} color="secondary">
+                        <Link underline="hover" color="primary" href="/">
+                            Главная
+                        </Link>
+                        <Typography sx={{ fontSize: '14px'}}>{title}</Typography>
+                    </Breadcrumbs>
                 </Container>
             </Box>
             {children}

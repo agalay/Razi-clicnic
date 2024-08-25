@@ -150,66 +150,141 @@ const Home: NextPage = () => {
                             <Grid2 md={8} sx={{ px: 5 }}>
                                 <Grid2 container spacing={3}>
                                     <Grid2 md={6}>
-                                        <TextField
-                                            label="Имя"
-                                            size="small"
-                                            fullWidth
-                                            sx={{ mb: 2 }}
-                                        />
-                                        <TextField
-                                            label="Email"
-                                            type="email"
-                                            size="small"
-                                            fullWidth
-                                            sx={{ mb: 2 }}
-                                        />
-                                        <TextField
-                                            select
-                                            label="Доктор"
-                                            size="small"
-                                            fullWidth
-                                            sx={{ mb: 2 }}
-                                        >
-                                            {['Гинеколог', 'Невролог', 'Педиатр'].map((option) => (
-                                                <MenuItem key={option} value={option}>
-                                                    {option}
-                                                </MenuItem>
-                                            ))}
-                                        </TextField>
-                                        <Button variant="contained">Отправить</Button>
+                                        <div>
+                                            <Box
+                                                component="label"
+                                                sx={{
+                                                    fontSize: '14px',
+                                                    fontWeight: '500',
+                                                    lineHeight: '30px',
+                                                    color: '#585858'
+                                                }}
+                                            >
+                                                Имя
+                                            </Box>
+                                            <TextField
+                                                size="small"
+                                                fullWidth
+                                                sx={{mb: 2, background: 'rgba(var(--input-bg), .15)'}}
+                                            />
+                                        </div>
+                                        <div>
+                                            <Box
+                                                component="label"
+                                                sx={{
+                                                    fontSize: '14px',
+                                                    fontWeight: '500',
+                                                    lineHeight: '30px',
+                                                    color: '#585858'
+                                                }}
+                                            >
+                                                Email
+                                            </Box>
+                                            <TextField
+                                                size="small"
+                                                fullWidth
+                                                sx={{mb: 2, background: 'rgba(var(--input-bg), .15)'}}
+                                            />
+                                        </div>
+                                        <div>
+                                            <Box
+                                                component="label"
+                                                sx={{
+                                                    fontSize: '14px',
+                                                    fontWeight: '500',
+                                                    lineHeight: '30px',
+                                                    color: '#585858'
+                                                }}
+                                            >
+                                                Доктор
+                                            </Box>
+                                            <TextField
+                                                select
+                                                size="small"
+                                                fullWidth
+                                                sx={{mb: 2, background: 'rgba(var(--input-bg), .15)'}}
+                                            >
+                                                {['Гинеколог', 'Невролог', 'Педиатр'].map((option) => (
+                                                    <MenuItem key={option} value={option}>
+                                                        {option}
+                                                    </MenuItem>
+                                                ))}
+                                            </TextField>
+                                        </div>
+
+                                        <Button variant="contained" sx={{ marginTop: '20px' }}>Создать запись</Button>
                                     </Grid2>
                                     <Grid2 md={6}>
-                                        <TextField
-                                            select
-                                            label="Ваш пол"
-                                            size="small"
-                                            fullWidth
-                                            sx={{ mb: 2 }}
-                                        >
-                                            {['Муж.', 'Жен.'].map((option) => (
-                                                <MenuItem key={option} value={option}>
-                                                    {option}
-                                                </MenuItem>
-                                            ))}
-                                        </TextField>
-                                        <TextField
-                                            type="date"
-                                            size="small"
-                                            fullWidth
-                                            sx={{ mb: 2 }}
-                                        />
-                                        <TextField
-                                            select
-                                            label="Отделение"
-                                            size="small"
-                                            fullWidth
-                                        >
-                                            {['Гинекология', 'Терапия', 'Урология'].map((option) => (
-                                                <MenuItem key={option} value={option}>
-                                                    {option}
-                                                </MenuItem>
-                                            ))}
-                                        </TextField>
+                                        <div>
+                                            <Box
+                                                component="label"
+                                                sx={{
+                                                    fontSize: '14px',
+                                                    fontWeight: '500',
+                                                    lineHeight: '30px',
+                                                    color: '#585858'
+                                                }}
+                                            >
+                                                Ваш пол
+                                            </Box>
+                                            <TextField
+                                                select
+                                                size="small"
+                                                fullWidth
+                                                sx={{mb: 2, background: 'rgba(var(--input-bg), .15)'}}
+                                            >
+                                                {['Муж.', 'Жен.'].map((option) => (
+                                                    <MenuItem key={option} value={option}>
+                                                        {option}
+                                                    </MenuItem>
+                                                ))}
+                                            </TextField>
+                                        </div>
+                                        <div>
+                                            <Box
+                                                component="label"
+                                                sx={{
+                                                    fontSize: '14px',
+                                                    fontWeight: '500',
+                                                    lineHeight: '30px',
+                                                    color: '#585858'
+                                                }}
+                                            >
+                                                Дата приема
+                                            </Box>
+                                            <TextField
+                                                type="date"
+                                                size="small"
+                                                fullWidth
+                                                sx={{mb: 2, background: 'rgba(var(--input-bg), .15)'}}
+                                            />
+                                        </div>
+
+                                        <div>
+                                            <Box
+                                                component="label"
+                                                sx={{
+                                                    fontSize: '14px',
+                                                    fontWeight: '500',
+                                                    lineHeight: '30px',
+                                                    color: '#585858'
+                                                }}
+                                            >
+                                                Отделение
+                                            </Box>
+                                            <TextField
+                                                select
+                                                size="small"
+                                                fullWidth
+                                            >
+                                                {['Гинекология', 'Терапия', 'Урология'].map((option) => (
+                                                    <MenuItem key={option} value={option}>
+                                                        {option}
+                                                    </MenuItem>
+                                                ))}
+                                            </TextField>
+                                        </div>
+
                                     </Grid2>
                                 </Grid2>
                             </Grid2>
@@ -217,11 +292,11 @@ const Home: NextPage = () => {
                     </Card>
                 </SectionLayout>
                 <SectionLayout title="Отзывы" container={false}>
-                    <CarouselReviews />
+                    <CarouselReviews/>
                 </SectionLayout>
                 <SectionLayout title="Наши новости" container={false}>
-                    <Box sx={{ marginLeft: 'calc((100% - min(90%, 70.5rem))/2)' }}>
-                        <CarouselNews />
+                    <Box sx={{marginLeft: 'calc((100% - min(90%, 70.5rem))/2)'}}>
+                        <CarouselNews/>
                     </Box>
                 </SectionLayout>
                 <section>
